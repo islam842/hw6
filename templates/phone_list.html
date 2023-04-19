@@ -1,18 +1,29 @@
-<!DOCTYPE html>
+{% load static %}
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Phone List</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phonelist</title>
+    <link rel="shortcut icon" href="https://assets.turbologo.ru/blog/ru/2017/09/18170925/eshop-logo.png">
+    <link rel="stylesheet" href="{% static 'css/style.css '%}">
 </head>
 <body>
+{% include 'header.html' %}
 <ol>
     {% for i in phone_list %}
         <li>
             <h1>{{i.title}}</h1>
-            <img src="{{i.image.url}}" alt="" width="200" height="200">
+            <img src="{{i.image.url}}" alt="" width="300" height="300">
             <a href="/phone_list/{{i.id}}">Подробнее</a>
         </li>
     {% endfor %}
 </ol>
+{% include 'footer.html' %}
 </body>
 </html>
+
+
+

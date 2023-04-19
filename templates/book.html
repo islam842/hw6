@@ -1,11 +1,44 @@
-<ul>
-  {% for i in book_object %}
-  <li>
-    <h1>{{i.title}}</h1>
-    <p>{{i.description}}</p>
-    <img src="{{i.image.url}}" alt="" width="200" height="200">
-    <p>{{i.created_date}}</p>
-      <p>{{i.updated_date}}</p>
-  </li>
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Book</title>
+   <link rel="shortcut icon" href="https://img.hhcdn.ru/employer-logo/5832362.png">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<center>
+  <button><h2>Home</h2></button>
+  <button><h2>Contact</h2></button>
+  <button><h2>Portfolio</h2></button>
+  <button><h2>About Us</h2></button>
+</center>
+{% for i in book_object %}
+<div class="container">
+    <div class="post">
+        <div class="post-image">
+            <img src="{{i.image.url}}">
+        </div>
+        <div class="post-content">
+            <div class="post-header">
+                <h1 class="geeks">{{i.title}}</h1>
+                <div class="post-meta">
+                    <time datetime="2019-04-01">{{i.created_date}}</time>
+                </div>
+            </div>
+            <p>{{i.description}}
+            </p>
+        </div>
+    </div>
+</div>
   {% endfor %}
-</ul>
+
+
+
+</body>
+</html>
