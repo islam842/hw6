@@ -1,35 +1,5 @@
-p{
-    width: 350px;
-    height: 50px;
-
-
-
-
-}
-
-nav{
-    background-color: cornflowerblue;
-    color: rebeccapurple;
-    font-family: "Bodoni MT Poster Compressed";
-    text-align: center;
-}
-ol{
-    text-align: center;
-    background-color: cornflowerblue;
-}
-
-
-
-p{
-    color: darkblue;
-    font-family: "Arial";
-}
-
-
-
-
 /*Уникальный селектор*/
-body{
+body {
     background-color: cyan;
     color: brown;
     font-family: "Arial";
@@ -37,34 +7,34 @@ body{
 }
 
 /* кнопочки на верху */
-button{
+button {
     width: 300px;
     height: 80px;
     background-color: darkblue;
 }
 
-h2{
+h2 {
     color: darkviolet;
 }
 
 
 /*Селектор тэга*/
-h1{
+h1 {
     color: darkred;
     font-family: "Algerian";
 }
-p{
+
+p {
     color: darkblue;
     font-family: "Arial";
 }
 
 
 /*селектор класса*/
-.geeks{
+.geeks {
     color: red;
     font-family: "Tw Cen MT Condensed Extra Bold";
 }
-
 
 
 /* взято из интернета html5book*/
@@ -72,32 +42,39 @@ p{
     box-sizing: border-box;
     margin: 0;
 }
+
 body {
     font-family: 'Montserrat', sans-serif;
     color: #606060;
     font-size: 14px;
 }
+
 .container {
-    max-width: 900px;
+    max-width: 960px;
     margin: 50px auto;
     padding: 0 15px;
     background: white;
 }
+
 .post {
     padding: 2em 0 1em;
 }
+
 .post-image img {
     width: 100%;
     margin: 0 0 20px 0;
 }
+
 .post h1 {
     color: #222;
     font-weight: 500;
-     margin-bottom: 30px;
+    margin-bottom: 30px;
 }
+
 .post-header {
     text-align: center;
 }
+
 .post-meta {
     margin-bottom: 30px;
     display: inline-block;
@@ -105,6 +82,7 @@ body {
     text-transform: uppercase;
     font-size: .8em;
 }
+
 .post-meta:before {
     content: "";
     position: absolute;
@@ -115,11 +93,13 @@ body {
     height: 2px;
     background: #222;
 }
+
 time,
 .author {
     padding-right: 26px;
     position: relative;
 }
+
 time:after,
 .author:after {
     content: "/";
@@ -129,18 +109,22 @@ time:after,
     right: 10px;
     transform: translateY(-50%);
 }
+
 p {
     line-height: 1.5;
     margin-bottom: 1em;
     text-align: justify;
 }
+
 @media (min-width: 768px) {
     body {
         font-size: 16px;
     }
+
     .container {
         padding: 0 45px;
     }
+
     .post-image img {
         float: left;
         width: 300px;

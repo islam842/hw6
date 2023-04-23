@@ -7,21 +7,21 @@
 <body>
 {% include 'header.html' %}
 <center>
-<div class="card" style="width: 18rem;">
-  <img src="{{phone_id.image.url}}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{phone_id.title}}</h5>
-    <p class="card-text">{{phone_id.description}}</p>
-      <p class="card-text">{{phone_id.genre}}</p>
-      <p class="card-text">{{phone_id.cost}}</p>
-      <p class="card-text">{{phone_id.model_phone}}</p>
-      <p class="card-text">{{phone_id.created_date}}</p>
-    <a href="/phone_list/" class="btn btn-primary">На главную</a>
-  </div>
-</div>
+    <div class="card" style="width: 18rem;">
+        <img src="{{phone_id.image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{phone_id.title}}</h5>
+            <p class="card-text">{{phone_id.description}}</p>
+            <p class="card-text">{{phone_id.genre}}</p>
+            <p class="card-text">{{phone_id.cost}}</p>
+            <p class="card-text">{{phone_id.model_phone}}</p>
+            <p class="card-text">{{phone_id.created_date}}</p>
+            <a href="/phone_list/" class="btn btn-primary">На главную</a>
+        </div>
+    </div>
 
-  <iframe src="{{phone_id.video}}" frameborder="0" width="350" height="250">
-  </iframe>
+    <iframe src="{{phone_id.video}}" frameborder="0" width="400" height="250">
+    </iframe>
 </center>
 {% include 'footer.html' %}
 </body>

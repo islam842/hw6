@@ -1,0 +1,25 @@
+/* Взято из интернета*/
+hr {
+    border: none; /* Убираем границу для браузера Firefox */
+    color: red; /* Цвет линии для остальных браузеров */
+    background-color: red; /* Цвет линии для браузера Firefox и Opera */
+    height: 10px; /* Толщина линии */
+}
+
+/*Уникальный селектор*/
+body {
+    text-align: center;
+}
+
+
+/*Селектор тэга изменяю здесь описание*/
+p {
+    color: darkblue;
+    font-family: "Arial";
+}
+
+
+/*Селектор тэга изменяю здесь название*/
+div {
+    color: red;
+}

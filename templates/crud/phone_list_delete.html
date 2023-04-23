@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone_list_delete</title>
+</head>
+<body>
+<h1>Выберите телефон для удаления</h1>
+<h2><a href="/phone_list/">На главную</a></h2>
+<ul>
+    {% for i in phone_list_delete %}
+    <li>
+        <a href="/phone_delete_list/{{i.id}}">{{i.title}}</a>
+    </li>
+    {% endfor %}
+</ul>
+<hr>
+</body>
+</html>
+
+
+<style>
+
+    hr {
+        border: none; /* Убираем границу для браузера Firefox */
+        color: red; /* Цвет линии для остальных браузеров */
+        background-color: red; /* Цвет линии для браузера Firefox и Opera */
+        height: 10px; /* Толщина линии */
+    }
+
+</style>
