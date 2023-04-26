@@ -6,11 +6,11 @@
 </head>
 <body>
 <h1>Выберите телефон для удаления</h1>
-<h2><a href="/phone_list/">На главную</a></h2>
+<h2><a href="/">На главную</a></h2>
 <ul>
-    {% for i in phone_list_delete %}
+    {% for i in object_list %}
     <li>
-        <a href="/phone_delete_list/{{i.id}}">{{i.title}}</a>
+        <a href="/phone_delete/{{i.id}}/delete/">{{i.title}}</a>
     </li>
     {% endfor %}
 </ul>

@@ -8,20 +8,43 @@
 {% include 'header.html' %}
 <center>
     <div class="card" style="width: 18rem;">
-        <img src="{{phone_id.image.url}}" class="card-img-top" alt="...">
+        <img src="{{object.image.url}}" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">{{phone_id.title}}</h5>
-            <p class="card-text">{{phone_id.description}}</p>
-            <p class="card-text">{{phone_id.genre}}</p>
-            <p class="card-text">{{phone_id.cost}}</p>
-            <p class="card-text">{{phone_id.model_phone}}</p>
-            <p class="card-text">{{phone_id.created_date}}</p>
-            <a href="/phone_list/" class="btn btn-primary">На главную</a>
+            <h5 class="card-title">{{object.title}}</h5>
+            <p class="card-text">{{object.description}}</p>
+            <p class="card-text">{{object.genre}}</p>
+            <p class="card-text">{{object.cost}}</p>
+            <p class="card-text">{{object.model_phone}}</p>
+            <p class="card-text">{{object.created_date}}</p>
+            <a href="/" class="btn btn-primary">На главную</a>
         </div>
     </div>
 
-    <iframe src="{{phone_id.video}}" frameborder="0" width="400" height="250">
+    <iframe src="{{object.video}}" frameborder="0" width="400" height="250">
     </iframe>
+
+    <div class="p-3 mb-2 bg-info  text-white" style="width: 22rem;">
+        <table border="2">
+            <tr>
+                <td>Дата рейтинга:</td>
+                <td>Оценка:</td>
+                <td>&nbsp;&nbsp;&nbsp;Комментарий:</td>
+            </tr>
+            {% for j in object.reviews.all %}
+            <tr>
+                <td>{{j.created_date}}</td>
+                <td>&nbsp;&nbsp;&nbsp; {{j.rate}}</td>
+                <td>&nbsp;&nbsp;{{j.comment}}</td>
+            </tr>
+            {% endfor %}
+            <form action="/add-comment/" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit">Оставить отзыв</button>
+            </form>
+        </table>
+    </div>
+
 </center>
 {% include 'footer.html' %}
 </body>

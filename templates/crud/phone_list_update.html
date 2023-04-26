@@ -6,12 +6,11 @@
 </head>
 <body>
 <h1>Выберите телефон для обновления</h1>
-<h2><a href="/phone_list/">На главную</a></h2>
+<h2><a href="/">На главную</a></h2>
 <ul>
-    {% for i in phone_list_update %}
+    {% for i in object_list %}
     <li>
-        <h1>{{i.title}}</h1>
-        <button><a href="/phone_update_list/{{i.id}}/update/">Редактировать</a></button>
+        <a href="/phone_update/{{i.id}}/update/">{{i.title}}</a>
     </li>
     {% endfor %}
 </ul>
